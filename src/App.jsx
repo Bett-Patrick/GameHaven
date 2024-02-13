@@ -1,34 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import './index.css';
+import { FaFacebook, FaGoogle, FaInstagram, FaYoutube } from "react-icons/fa";
 
-function App() {
-  const [count, setCount] = useState(0)
 
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className='App'>
+      <div className='aside-plus-nav'>
+      
+        <aside className='side-nav'>
+          <ul className='genres'>
+            <li className='genre-heading'>GENRES</li>
+            <li>Battle</li>
+            <li>Shooter</li>
+          </ul>
+        </aside>
+
+        <nav className='nav-bar'>
+          <a href="" className='home'>Home</a>
+          <a href="" className='about'>About</a>
+          <button className='my-games'>My games</button>
+        </nav>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      
+      <footer className='footer'>
+        <div className='contacts'>
+          <h4>GameHaven&co</h4>
+          <h4>0712345678</h4>
+          <h4>p.o box 100,</h4>
+          <h4>Nairobi</h4>
+        </div>
+        <div className="social-icons">
+              <a href="https://www.facebook.com"><FaFacebook size={30} style={{color:"white"}}/></a>
+              <a href="https://www.google.com"> <FaGoogle/></a>
+              <a href="https://www.youtube.com"><FaYoutube/></a>
+              <a href="https://www.instagram.com"><FaInstagram/></a>
+        </div>
+      </footer>
+    </div>
   )
 }
 
