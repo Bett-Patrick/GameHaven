@@ -5,7 +5,7 @@
 }
 body{
   width: 100%;
-  background-color: rgb(0, 10, 36);
+  background-color: #f1f1f1;
   font-family: Arial, Helvetica, sans-serif;
 }
 .genre-heading{
@@ -18,24 +18,42 @@ body{
 .aside-plus-nav{
   display: flex;
   flex-direction: row;
+  width: 100vw;
 }
 .nav-bar{
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  height: 50px;
-  background-color: #f1f1f1;
-  width: 80%;
+  height: 80px;
+  background-color: #020930;
+  opacity: 60%;
+  width: 80vw;
   font-size: larger;
   font-weight: 600;
+  border-radius: 0 0 15px 15px;
 }
+
+/* Search */
+.search-form{
+  border: #020930 3px solid;
+}
+.search-form input{
+  height: 50px;
+  border-radius: 10px;
+  font-size: large;
+  padding-left: 10px;
+}
+
 .about{
   transition: transform 2s ease;
+  color: #f1f1f1;
+  margin-right: 150px;
 }
 .home{
   margin-right: 40px;
   transition: transform 2s ease;
+  color: #f1f1f1;
 }
 .home:hover {
   background-color: red;
@@ -56,7 +74,7 @@ body{
   font-weight: 600;
   color: #f1f1f1;
   padding: 3px;
-  margin: 0 10px 0 40%;
+  margin: 0 10px 0 30%;
   transition: width 2s, height 2s, transform 2s;
 }
 .nav-bar button:hover{
@@ -68,13 +86,24 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f1f1f1;
-  width: 20%;
-  height: 100vh;
-  /* background-color: rgb(0, 10, 36); */
+  background-color: #020930;
+  color: #f1f1f1;
+  width: 20vw;
+  height: 80vh;
+  border-radius: 0 0 20px 0;
 }
 .genres{
   list-style-type: none;
+}
+.genres li{
+  font-size: x-large;
+  margin-bottom: 10px;
+  background-color: #f1f1f1;
+  color: #020930;
+  border-radius: 7px;
+  padding: 5px;
+  font-weight: 400;
+  box-shadow: 0px 10px 10px -5px rgb(240, 8, 8);
 }
 .genre-heading{
   display: flex;
@@ -85,11 +114,27 @@ body{
 
 
 /* Footer */
-
 .footer{
-  background-color: pink;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #020930;
+  opacity: 60%;
+  height: 20vh;
 }
 .social-icons{
   /* background-color: #c81818; */
+  color: #f1f1f1;
+}
+.social-icons a{
+  margin-right: 10px;
+}
+.contacts{
+  font-size: larger;
+  color: #f1f1f1;
+}
+.address{
+  font-size: larger;
   color: #f1f1f1;
 }
