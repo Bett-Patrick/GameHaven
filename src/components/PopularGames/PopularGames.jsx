@@ -2,11 +2,13 @@ import React from 'react'
 import '../../../src/index.css'
 
 
-const PopularGames = () => {
+
+const PopularGames = ({games}) => {
+    
   return (
     <div className='popular-games'>
         <div>
-            <img src="" alt="game" />
+            <img src={games.thumbnail} alt={games.title} />
         </div>
     </div>
   )
