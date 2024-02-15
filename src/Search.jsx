@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './index.css';
 import axios from 'axios';
 
@@ -11,7 +11,7 @@ const Search = () => {
 
     try {
       const response = await axios.get('https://www.freetogame.com/api/games');
-      setSearchResults(response.data); // Assuming the API response contains the search results
+      setSearchResults(response.data); 
     } catch (error) {
       console.error('Error fetching data:', error);
     }

@@ -1,4 +1,3 @@
-import React from 'react'
 import './index.css';
 import SideBar from './SideBar';
 import NavBar from './NavBar';
