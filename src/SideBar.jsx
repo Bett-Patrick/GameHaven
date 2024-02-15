@@ -8,6 +8,7 @@ const SideBar = () => {
     <aside className='side-nav'>
       <ul className='genres'>
         <h3 className='genre-heading'>{Genre}</h3>
+        <Genre games={games}/>
       </ul>
     </aside>
   )
