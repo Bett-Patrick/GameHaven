@@ -1,7 +1,9 @@
-import React from 'react'
+import React from 'react';
 import './index.css';
 
 const Search = () => {
+  
+
   return (
     <div className="search">
         <form className='search-form' action="">
@@ -13,4 +15,5 @@ const Search = () => {
   )
 }
 
-export default Search
+
+export default Search;
