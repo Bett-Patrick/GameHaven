@@ -1,4 +1,5 @@
-[
+{"games":[
+
   {
     "id": 540,
     "title": "Overwatch 2",
@@ -5121,4 +5122,4 @@
     "release_date": "1997-01-07",
     "freetogame_profile_url": "https://www.freetogame.com/tibia"
   }
-]
+]}
