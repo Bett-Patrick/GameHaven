@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './index.css';
 
 const Search = () => {
@@ -13,4 +13,5 @@ const Search = () => {
   )
 }
 
-export default Search
+
+export default Search;
