@@ -11,7 +11,8 @@ const Search = () => {
 
     try {
       const response = await axios.get(`http://localhost:3000/games`);
-      setSearchResults(response.data); // Assuming the API response contains the search results
+      setSearchResults(response.data); 
+      // Assuming the API response contains the search results.
     } catch (error) {
       console.error('Error fetching data:', error);
     }
