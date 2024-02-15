@@ -1,18 +1,19 @@
-import './index.css';
-import SideBar from './SideBar';
-import NavBar from './NavBar';
-import Footer from './Footer';
-
+import React from 'react'
+import { BrowserRouter , Routes , Route} from 'react-router-dom'
+import Homepage from './Homepage'
+import AboutPage from './AboutPage'
+import Game from './components/Game/Game'
 
 const App = () => {
   return (
-    <div className='App'>
-      <div className='aside-plus-nav'>
-       <SideBar/>
-       <NavBar/>
-      </div>
-      <Footer/>
-    </div>
+   <BrowserRouter>
+   <Routes>
+    <Route path="/"  element={<Homepage/>}/>
+    <Route path='/about' element={<AboutPage/>}/>
+    <Route path='/game' element={<Game/>}/>
+
+   </Routes>
+   </BrowserRouter>
   )
 }
 
