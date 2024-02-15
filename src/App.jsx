@@ -1,43 +1,19 @@
-import React, { useEffect, useState } from 'react'
-import './index.css';
-import SideBar from './SideBar';
-import NavBar from './NavBar';
-import Footer from './Footer';
-import PopularGames from './components/PopularGames/PopularGames';
-import PopulatedGames from './components/PopulatedGames';
-
-
+import React from 'react'
+import { BrowserRouter , Routes , Route} from 'react-router-dom'
+import Homepage from './Homepage'
+import AboutPage from './AboutPage'
+import Game from './components/Game/Game'
 
 const App = () => {
-  const [games, setGames] = useState([])
-  const [clickedGenre, setClickedGenre]=useState(null)
-
-  const handleGenreClick=(genre)=>{
-    setClickedGenre(genre)
-  }
-  useEffect(()=>{
-    fetch('http://localhost:3000/games')
-      .then(res=>res.json())
-      .then((games)=>{
-        console.log(games)
-        setGames(games)
-      } )
-  }, [])
-
   return (
-    <div className='App'>
-      <div className='aside-plus-nav'>
-        <SideBar games={games} onGenreClick={handleGenreClick}/>
-    
-       <div className='nav-container'>
-        <NavBar/>
-        {PopulatedGames? 
-        <PopulatedGames games={games} clickedGenre={clickedGenre} />
-        :<PopularGames games={games}/>}
-       </div>
-      </div>
-      <Footer/>
-    </div>
+   <BrowserRouter>
+   <Routes>
+    <Route path="/"  element={<Homepage/>}/>
+    <Route path='/about' element={<AboutPage/>}/>
+    <Route path='/game' element={<Game/>}/>
+
+   </Routes>
+   </BrowserRouter>
   )
 }
 

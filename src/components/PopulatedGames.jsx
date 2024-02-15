@@ -1,7 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PopulatedGames = ({ games, clickedGenre }) => {
+
   const filteredGames = games.filter((game) => game.genre === clickedGenre);
+
+
+
 
   return (
     <div className='populated-games'>
@@ -11,7 +16,10 @@ const PopulatedGames = ({ games, clickedGenre }) => {
           <div className='listed-game' key={game.id}>
             <img src={game.thumbnail} alt={game.title} />
             <h3>{game.title}</h3>
-            <button onClick={()=>alert("Clicked")}>View</button>
+
+            <Link to="/game">
+              <button onClick={()=>{handleViewClick}}>View</button>
+              </Link>
           </div>    
         ))}
         
