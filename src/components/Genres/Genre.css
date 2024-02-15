@@ -18,10 +18,10 @@
     transition: background-color 0.3s;
   }
   
-  .genre-sidebar li:hover {
+  /* .genre-sidebar li:hover {
     background-color: #ccc;
   }
-  
+   */
   .games-list {
     margin-top: 10px;
   }
@@ -33,5 +33,14 @@
   
   .games-list li {
     margin-bottom: 4px;
+  }
+  .populated-games {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .listed-game{
+    display: flex;
+    flex-direction: column;
   }
   
