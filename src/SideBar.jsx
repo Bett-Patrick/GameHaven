@@ -2,7 +2,7 @@ import React from 'react'
 import './index.css';
 import Genre from './components/Genres/Genre';
 
-const SideBar = () => {
+const SideBar = ({games}) => {
 
   return (
     <aside className='side-nav'>
