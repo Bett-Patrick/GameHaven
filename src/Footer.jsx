@@ -1,4 +1,3 @@
-import React from 'react'
 import './index.css';
 import { FaFacebook, FaGoogle, FaInstagram, FaYoutube } from "react-icons/fa";
 

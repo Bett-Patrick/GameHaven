@@ -25,9 +25,10 @@ function Genre({games, onGenreClick}) {
             onClick={()=>{
               // setHoveredGenre(genre);
               onGenreClick(genre) 
-              games.filter((game)=>game.genre===genre)
-              setFilteredGames(filteredGames)}}
-          >{genre}
+              setFilteredGames(games.filter((game)=>game.genre===genre))
+            }}
+          >
+            {genre}
           </li>     
         ))}
       </ul>
