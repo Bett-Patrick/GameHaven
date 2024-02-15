@@ -14,7 +14,7 @@ const App = () => {
       .then(res=>res.json())
       .then((games)=>{
         console.log(games)
-        return games
+        setGames(games)
       } )
   }, [])
 

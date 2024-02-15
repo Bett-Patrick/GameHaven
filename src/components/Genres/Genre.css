@@ -1,0 +1,37 @@
+.genre-sidebar {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  
+  .genre-sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .genre-sidebar li {
+    cursor: pointer;
+    margin-bottom: 8px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #ddd;
+    transition: background-color 0.3s;
+  }
+  
+  .genre-sidebar li:hover {
+    background-color: #ccc;
+  }
+  
+  .games-list {
+    margin-top: 10px;
+  }
+  
+  .games-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .games-list li {
+    margin-bottom: 4px;
+  }
+  
