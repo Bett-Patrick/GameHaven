@@ -31,8 +31,12 @@ function Genre({games}) {
           <ul>
             {games
               .filter((game)=>game.genre===hoveredGenre)
-              .map((game, index)=>(
-                <li key={index}>{game.title}</li>
+              .map((game, index)=>( 
+                <div key={index}>
+                  <h3>{game.title}</h3>
+                  <img src={game.thumbnail} alt={game.title} />
+                  <button>View</button>
+                </div>
               ))}
           </ul>
         </div>
