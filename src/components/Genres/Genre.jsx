@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 
 function Genre({games, onGenreClick}) {
   const [filteredGames,setFilteredGames]=useState([])
-
   //avoiding the genres from repeating themselves
   //to only display unique genres
   const uniqueGenres=new Set()
@@ -12,6 +11,10 @@ function Genre({games, onGenreClick}) {
   })
   //after getting the genres convert them back to array
   const genreArray=Array.from(uniqueGenres)
+  // function handleClick(event){ 
+  //   alert("Clicked")
+  //   console.log(event.target.value)
+  // }
   return (
     <div className='genre-sidebar'>
       <h2>Games Genres</h2>
@@ -20,10 +23,12 @@ function Genre({games, onGenreClick}) {
           <li 
             key={genre}
             onClick={()=>{
+              // setHoveredGenre(genre);
               onGenreClick(genre) 
-              filteredGames= games.filter((game)=>game.genre===genre)
-              setFilteredGames(filteredGames)}}
-          >{genre}
+              setFilteredGames(games.filter((game)=>game.genre===genre))
+            }}
+          >
+            {genre}
           </li>     
         ))}
       </ul>

@@ -1,17 +1,9 @@
-import React from 'react';
-import './index.css';
+import React from 'react'
 
 const Search = () => {
   return (
-    <div className="search">
-        <form className='search-form' action="">
-            <input type="text" placeholder="Search"/>
-            <input type="submit" value="Search"/>
-        </form>
-    </div>
-
+    <div>Search</div>
   )
 }
 
-
-export default Search;
+export default Search
