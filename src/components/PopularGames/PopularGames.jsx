@@ -1,6 +1,6 @@
 import React from 'react'
-import '../../src/index.css';
-import './popular_games.css'
+import '../../../src/index.css'
+
 
 const PopularGames = () => {
   return (

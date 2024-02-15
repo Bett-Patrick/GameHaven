@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function Genre() {
+function Genre({games}) {
   const [hoveredGenre, setHoveredGenre]=useState(null)
   const genres= games.genre
   return (

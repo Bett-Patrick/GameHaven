@@ -3,7 +3,8 @@ import './index.css';
 import SideBar from './SideBar';
 import NavBar from './NavBar';
 import Footer from './Footer';
-import PopularGames from './PopularGames/PopularGames';
+import PopularGames from './components/PopularGames/PopularGames';
+
 
 
 const App = () => {
