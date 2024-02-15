@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import './index.css';
-import axios from 'axios';
+import React from 'react'
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -17,20 +15,9 @@ const Search = () => {
       console.error('Error fetching data:', error);
     }
   };
-
   return (
-    <div>
-      <div className="search">
-        <form className='search-form' onSubmit={handleSearch}>
-          <input
-            type="text"
-            placeholder="Search"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <input type="submit"/>
-        </form>
-        </div>
-    </div>)}
+    <div>Search</div>
+  )
+}
 
-export default Search;
+export default Search
