@@ -7,6 +7,14 @@ import PopularGames from './PopularGames/PopularGames';
 
 
 const App = () => {
+  const games = () => {
+    fetch(" https://www.freetogame.com/api/games")
+    .then(res => res.json())
+    .then((games) => {
+      console.log(games)
+    })
+  }
+
   return (
     <div className='App'>
       <div className='aside-plus-nav'>
