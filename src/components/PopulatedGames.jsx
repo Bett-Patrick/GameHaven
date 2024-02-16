@@ -5,9 +5,6 @@ const PopulatedGames = ({ games, clickedGenre }) => {
 
   const filteredGames = games.filter((game) => game.genre === clickedGenre);
 
-
-
-
   return (
     <div className='populated-games'>
       <h2>{clickedGenre} Games</h2>
