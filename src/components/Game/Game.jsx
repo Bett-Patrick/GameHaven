@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import NavBar from "../../NavBar"
 
 const Game = () => {
   const { id } = useParams();
@@ -32,6 +33,8 @@ const Game = () => {
   if (!gameData) return null; // Render nothing if gameData is null
   
   return (
+    <div>
+      <NavBar/>
     <div className='game-details'>
       <div className='split-div'>
         
@@ -51,6 +54,7 @@ const Game = () => {
           <button className='buy-btn'>BUY</button>
         </div>
       </div>
+    </div>
     </div>
   );
 };

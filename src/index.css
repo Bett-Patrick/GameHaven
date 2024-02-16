@@ -229,3 +229,25 @@ body{
   background-color: greenyellow;
 }
 
+
+
+
+
+/* About styles */
+/* about.css */
+.about-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-page h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-page p {
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
