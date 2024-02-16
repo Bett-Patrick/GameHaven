@@ -30,22 +30,24 @@ const Game = () => {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
   if (!gameData) return null; // Render nothing if gameData is null
-  
-  return (
-    <div>
-      <div>
-      <h1>{gameData.title}</h1>
-      <h2>{gameData.genre}</h2>
-      <img src={gameData.thumbnail} alt="" />
-      <p>{gameData.short_description}</p>
-      <p>{gameData.release_date}</p>
-      <p>{gameData.publisher}</p>
-      <p>{gameData.developer}</p>
-      <p>{gameData.platform}</p>
-      <p>{gameData.short_description}</p>
-      <button><a href={gameData.freetogame_profile_url}> FREE TRIAL</a> <a/></button><br />
-      <button>BUY</button>
 
+  return (
+    <div className="game-container">
+      <div className="game-image">
+        <img src={gameData.thumbnail} alt={gameData.title} />
+      </div>
+      <div className="game-details">
+        <h1>{gameData.title}</h1>
+        <h2>{gameData.genre}</h2>
+        <p>{gameData.short_description}</p>
+        <p>Release Date: {gameData.release_date}</p>
+        <p>Publisher: {gameData.publisher}</p>
+        <p>Developer: {gameData.developer}</p>
+        <p>Platform: {gameData.platform}</p>
+        <p>{gameData.short_description}</p>
+        <a className="free-trial-button" href={gameData.freetogame_profile_url}>Free Trial</a>
+        <button className="buy-button">Buy Now</button>
+        <button className="back-button"><a href="/">Back to Home</a></button>
       </div>
     </div>
   );
