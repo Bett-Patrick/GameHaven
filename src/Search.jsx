@@ -1,19 +1,19 @@
-import React from 'react'
-import { FaSearch } from 'react-icons/fa'
+// import React from 'react'
+// import { FaSearch } from 'react-icons/fa'
 
-const Search = () => {
-  return (
-    <div>
-      <form style={{display:"flex", gap:"2px", backgroundColor:"white", padding:'2px'}} action="">
-        <input type="text" />
-        <button style={{fontSize:"14px", display:"flex"}} type="submit">Search <FaSearch/></button>
-      </form>
+// const Search = () => {
+//   return (
+//     <div>
+//       <form style={{display:"flex", gap:"2px", backgroundColor:"white", padding:'2px'}} action="">
+//         <input type="text" />
+//         <button style={{fontSize:"14px", display:"flex"}} type="submit">Search <FaSearch/></button>
+//       </form>
       
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default Search
+// export default Search
 
 
 
