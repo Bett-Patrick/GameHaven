@@ -4,7 +4,7 @@ import SideBar from './SideBar';
 import NavBar from './NavBar';
 import Footer from './Footer';
 import PopularGames from './components/PopularGames/PopularGames';
-import PopulatedGames from './components/PopulatedGames';
+import PopulatedGames from './components/PopulatedGames/PopulatedGames';
 
 const Homepage = () => {
   const [games, setGames] = useState([]);
@@ -26,7 +26,7 @@ const Homepage = () => {
   };
 
   return (
-    <div className='App'>
+    <div className='home-page'>
       <div className='aside-plus-nav'>
         <SideBar games={games} onGenreClick={handleGenreClick} />
         <div className='nav-container'>
@@ -42,10 +42,13 @@ const Homepage = () => {
           )}
           {/* Render PopulatedGames component when a genre is clicked */}
           {clickedGenre && (
-            <PopulatedGames
-              games={games}
-              clickedGenre={clickedGenre}
-            />
+            <>
+              <h2>{clickedGenre} Games</h2>
+              <PopulatedGames
+                games={games}
+                clickedGenre={clickedGenre}
+              />
+            </>
           )}
         </div>
       </div>
