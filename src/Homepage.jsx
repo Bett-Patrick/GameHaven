@@ -32,7 +32,14 @@ const Homepage = () => {
         <div className='nav-container'>
           <NavBar />
           {/* Render PopularGames component when no genre is clicked */}
-          {!clickedGenre && <PopularGames games={games} />}
+          {!clickedGenre && (
+            <>
+              <h2>PopularGames</h2>
+              <PopularGames
+                games={games.slice(0, 10)} 
+              />
+            </>
+          )}
           {/* Render PopulatedGames component when a genre is clicked */}
           {clickedGenre && (
             <PopulatedGames
