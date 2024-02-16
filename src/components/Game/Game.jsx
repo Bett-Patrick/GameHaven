@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import NavBar from "../../NavBar"
 
-const Game = () => {
+const Game = ({ onBuy }) => {
   const { id } = useParams();
   const [gameData, setGameData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -28,35 +28,38 @@ const Game = () => {
       });
   }, [id]);
 
+  const handleBuy = () => {
+    if (gameData) {
+      onBuy(gameData); 
+    }
+  };
+
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
-  if (!gameData) return null; // Render nothing if gameData is null
+  if (!gameData) return null; 
   
   return (
     <div>
       <NavBar/>
-    <div className='game-details'>
-      <div className='split-div'>
-        
-        <div className='game-header'>
-          <h1>{gameData.title}</h1>
-          <h2>Genre: {gameData.genre}</h2>
-          <img src={gameData.thumbnail} alt="" />
+      <div className='game-details'>
+        <div className='split-div'>
+          <div className='game-header'>
+            <h1>{gameData.title}</h1>
+            <h2>Genre: {gameData.genre}</h2>
+            <img src={gameData.thumbnail} alt="" />
+          </div>
+          
+          <div className='game-desc'>
+            <p>{gameData.short_description}</p>
+            <p>Released on : {gameData.release_date}</p>
+            <p>Publisher : {gameData.publisher}</p>
+            <p>Developer: {gameData.developer}</p>
+            <p>Play on {gameData.platform}</p>
+            <button className='free-btn'><a href={gameData.freetogame_profile_url}> FREE TRIAL</a></button><br />
+            <button className='buy-btn' onClick={handleBuy}>BUY</button>
+          </div>
         </div>
-        
-        <div className='game-desc'>
-          <p>{gameData.short_description}</p>
-          <p>Released on : {gameData.release_date}</p>
-          <p>Publisher : {gameData.publisher}</p>
-          <p>Developer: {gameData.developer}</p>
-          <p>Play on {gameData.platform}</p>
-          <button className='free-btn'><a href={gameData.freetogame_profile_url}> FREE TRIAL</a> <a/></button><br />
-          <button className='buy-btn'>BUY</button>
-        </div>
-
-
       </div>
-    </div>
     </div>
   );
 };
