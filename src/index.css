@@ -251,3 +251,18 @@ body{
   margin-bottom: 10px;
 }
 
+.results-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+ margin: 10px;
+ list-style: none;
+ 
+
+}
+
+.results-container li{
+  border: #020930  solid 3px;
+  border-radius: 5px;
+  padding: 10px;
+}
