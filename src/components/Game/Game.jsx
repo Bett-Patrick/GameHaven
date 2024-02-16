@@ -53,6 +53,8 @@ const Game = () => {
           <button className='free-btn'><a href={gameData.freetogame_profile_url}> FREE TRIAL</a> <a/></button><br />
           <button className='buy-btn'>BUY</button>
         </div>
+
+
       </div>
     </div>
     </div>
