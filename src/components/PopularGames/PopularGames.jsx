@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const PopularGames = ({ games, clickedGenre }) => {
-  // Check if no genre is clicked
+  // Check if no genrre is clicked
   if (!clickedGenre) {
     return (
       <div className='popular-games'>
