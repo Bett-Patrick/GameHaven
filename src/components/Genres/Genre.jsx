@@ -11,19 +11,15 @@ function Genre({games, onGenreClick}) {
   })
   //after getting the genres convert them back to array
   const genreArray=Array.from(uniqueGenres)
-  // function handleClick(event){ 
-  //   alert("Clicked")
-  //   console.log(event.target.value)
-  // }
+ 
   return (
     <div className='genre-sidebar'>
-      <h2>Games Genres</h2>
+      {/* <h2>Games Genres</h2> */}
       <ul>
         {genreArray.map((genre)=>(
           <li 
             key={genre}
             onClick={()=>{
-              // setHoveredGenre(genre);
               onGenreClick(genre) 
               setFilteredGames(games.filter((game)=>game.genre===genre))
             }}
