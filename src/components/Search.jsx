@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
-import './index.css'
 import { FaSearch } from 'react-icons/fa';
+import './Search.css'
 import PropTypes from 'prop-types'; // Import PropTypes for prop validation
 
 const Search = ({ onSearchResults, searchTerm, setSearchTerm }) => {
@@ -29,7 +29,7 @@ const Search = ({ onSearchResults, searchTerm, setSearchTerm }) => {
 
   return (
     <div className='search-container'>
-      <form className="search-form" onSubmit={handleSearch} action="" style={{ display: 'flex' ,margin: "15px", justifyContent:"center"}}>
+      <form className="search-form" onSubmit={handleSearch} action="" style={{  justifyContent:"center"}}>
         <div className="search-input-container">
           <input
             type="text"
@@ -39,7 +39,11 @@ const Search = ({ onSearchResults, searchTerm, setSearchTerm }) => {
           />
         </div>
         <div className="search-button-container" >
-          <button type="submit" style={{padding: "12px", fontSize:"18px"}} onClick={handleSearch}>
+          <button 
+            type="submit" 
+            style={{padding: "12px", fontSize:"18px"}} 
+            onClick={handleSearch}
+          >
             <span>Search</span> <FaSearch style={{ marginLeft: "5px" }} />
           </button>
         </div>

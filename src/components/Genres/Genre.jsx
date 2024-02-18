@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './Genre.css'
 
 function Genre({games, onGenreClick}) {
   const [filteredGames,setFilteredGames]=useState([])
@@ -20,8 +21,8 @@ function Genre({games, onGenreClick}) {
           <li 
             key={genre}
             onClick={()=>{
-              onGenreClick(genre) 
-              setFilteredGames(games.filter((game)=>game.genre===genre))
+            onGenreClick(genre) 
+            setFilteredGames(games.filter((game)=>game.genre===genre))
             }}
           >
             {genre}

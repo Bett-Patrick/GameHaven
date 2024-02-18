@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './popular_games.css'
 
 const PopularGames = ({ games, clickedGenre }) => {
   // Check if no genre is clicked

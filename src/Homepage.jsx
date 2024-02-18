@@ -5,7 +5,7 @@ import NavBar from './NavBar';
 import Footer from './Footer';
 import PopularGames from './components/PopularGames/PopularGames';
 import PopulatedGames from './components/PopulatedGames/PopulatedGames';
-import Search from './Search';
+import Search from './components/Search';
 
 const Homepage = () => {
   const [games, setGames] = useState([]);
@@ -41,25 +41,20 @@ const Homepage = () => {
         <SideBar games={games} onGenreClick={handleGenreClick} />
         <div className='nav-container'>
           <NavBar />
-
-          
-
             <> 
             {!clickedGenre && (
                 <>
-                   
                 <Search
                 onSearchResults={handleSearchResults}
                 searchTerm={searchTerm}
                 setSearchTerm={setSearchTerm}
             />
-
                 </>
               )}
               {!clickedGenre && (
                 <>
                   <h2>PopularGames</h2>
-                  <PopularGames games={games.slice(0, 10)} />
+                  <PopularGames games={games.slice(0, 20)} />
                 </>
               )}
               {clickedGenre && (
