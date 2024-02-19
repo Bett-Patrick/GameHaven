@@ -52,13 +52,16 @@ const Homepage = () => {
                 </>
               )}
               {!clickedGenre && (
-                <>
+                <>    
                   <h2>PopularGames</h2>
                   <PopularGames games={games.slice(0, 20)} />
                 </>
               )}
               {clickedGenre && (
                 <>
+                   <Search
+                    searchTerm={searchTerm}
+                    setSearchTerm={setSearchTerm}/>
                   <h2>{clickedGenre} Games</h2>
                   <PopulatedGames games={games} clickedGenre={clickedGenre} />
                 </>
