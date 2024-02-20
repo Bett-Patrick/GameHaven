@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
+import '../../src/index.css'
 import { FaSearch } from 'react-icons/fa';
-import './Search.css'
-import PropTypes from 'prop-types'; // Import PropTypes for prop validation
 
 const Search = ({ onSearchResults, searchTerm, setSearchTerm }) => {
   const [searchResults, setSearchResults] = useState([]);
@@ -29,24 +28,16 @@ const Search = ({ onSearchResults, searchTerm, setSearchTerm }) => {
 
   return (
     <div className='search-container'>
-      <form className="search-form" onSubmit={handleSearch} action="" style={{  justifyContent:"center"}}>
-        <div className="search-input-container">
+      <form className="search-form" onSubmit={handleSearch} action="#" >
           <input
             type="text"
             placeholder="Search"
             value={searchTerm}
             onChange={handleInputChange}
           />
-        </div>
-        <div className="search-button-container" >
-          <button 
-            type="submit" 
-            style={{padding: "12px", fontSize:"18px"}} 
-            onClick={handleSearch}
-          >
-            <span>Search</span> <FaSearch style={{ marginLeft: "5px" }} />
+          <button className='search-btn' type="submit" onClick={handleSearch}>
+            <FaSearch />
           </button>
-        </div>
       </form>
 
       {searchResults.length > 0 && (
@@ -73,13 +64,6 @@ const Search = ({ onSearchResults, searchTerm, setSearchTerm }) => {
       )}
     </div>
   );
-};
-
-// Add PropTypes validation for the props
-Search.propTypes = {
-  onSearchResults: PropTypes.func.isRequired,
-  searchTerm: PropTypes.string.isRequired,
-  setSearchTerm: PropTypes.func.isRequired,
 };
 
 export default Search;

@@ -1,5 +1,5 @@
-import './index.css';
-import Genre from './components/Genres/Genre';
+import '../../src/index.css';
+import Genre from './Genres/Genre';
 
 const SideBar = ({games, onGenreClick}) => {
 

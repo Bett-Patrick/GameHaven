@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import NavBar from "../../NavBar"
+import NavBar from "../NavBar"
 
 const Game = ({ onBuy }) => {
   const { id } = useParams();

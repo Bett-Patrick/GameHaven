@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import './index.css';
+import './Search.css';
+
 import SideBar from './SideBar';
 import NavBar from './NavBar';
 import Footer from './Footer';
-import PopularGames from './components/PopularGames/PopularGames';
-import PopulatedGames from './components/PopulatedGames/PopulatedGames';
-import Search from './components/Search';
+import PopularGames from './PopularGames/PopularGames';
+import PopulatedGames from './PopulatedGames/PopulatedGames';
+import Search from './Search';
 
 const Homepage = () => {
   const [games, setGames] = useState([]);
@@ -41,34 +42,35 @@ const Homepage = () => {
         <SideBar games={games} onGenreClick={handleGenreClick} />
         <div className='nav-container'>
           <NavBar />
-            <> 
+          <> 
             {!clickedGenre && (
-                <>
+              <>
                 <Search
-                onSearchResults={handleSearchResults}
-                searchTerm={searchTerm}
-                setSearchTerm={setSearchTerm}
-            />
-                </>
-              )}
-              {!clickedGenre && (
-                <>    
-                  <h2>PopularGames</h2>
-                  <PopularGames games={games.slice(0, 20)} />
-                </>
-              )}
-              {clickedGenre && (
-                <>
-                   <Search
-                    searchTerm={searchTerm}
-                    setSearchTerm={setSearchTerm}/>
-                  <h2>{clickedGenre} Games</h2>
-                  <PopulatedGames games={games} clickedGenre={clickedGenre} />
-                </>
-              )}
-            </>
-          
+                  onSearchResults={handleSearchResults}
+                  searchTerm={searchTerm}
+                  setSearchTerm={setSearchTerm}
+                />
+              </>
+            )}
 
+            {!clickedGenre && (
+              <>    
+                <h2>PopularGames</h2>
+                <PopularGames games={games.slice(0, 20)} />
+              </>
+            )}
+
+            {clickedGenre && (
+              <>
+                {/* <Search
+                  searchTerm={searchTerm}
+                  setSearchTerm={setSearchTerm}/> */}
+                <h2>{clickedGenre} Games</h2>
+                <PopulatedGames games={games} clickedGenre={clickedGenre} />
+              </>
+            )}
+          </>
+          
           {searchResults.length > 0 && !clickedGenre && (
             <div>
               <h2>Search Results:</h2>

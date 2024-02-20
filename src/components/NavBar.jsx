@@ -1,4 +1,4 @@
-import './index.css';
+import '../../src/index.css';
 
 import { Link } from 'react-router-dom';
 
