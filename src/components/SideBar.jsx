@@ -1,13 +1,12 @@
-import React from 'react'
-import './index.css';
-import Genre from './components/Genres/Genre';
+import '../../src/index.css';
+import Genre from './Genres/Genre';
 
 const SideBar = ({games, onGenreClick}) => {
 
   return (
     <aside className='side-nav'>
       <ul className='genres'>
-        <h3 className='genre-heading'>Genres</h3>
+        <h2 className='genre-heading'>Genres</h2>
         <Genre games={games} onGenreClick={onGenreClick}/>
       </ul>
     </aside>

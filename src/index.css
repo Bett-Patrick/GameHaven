@@ -17,7 +17,7 @@ body{
   width: 80%;
 }
 
-/* Nav bar and Side bar */
+/* Nav bar and Side bar container*/
 .aside-plus-nav{
   display: flex;
   flex-direction: row;
@@ -34,59 +34,35 @@ body{
   width: 100%;
   font-size: larger;
   font-weight: 600;
-  border-radius: 0 0 15px 15px;
-}
-.nav-bar button{
-  font-size: xx-large;
-  background-color: red;
-  border-radius: 5px;
-  font-weight: 600;
-  color: #f1f1f1;
-  padding: 3px;
-  margin: 0 10px 0 30%;
-  transition: width 2s, height 2s, transform 2s;
-}
-.nav-bar button:hover{
-  width: 180px;
-  height: 50px;
-  transform: rotate(360deg);
+  /* border-radius: 0 0 15px 15px; */
 }
 
-/* Search form styling */
-.search-form{
-  border: #020930 3px solid;
-}
-.search-form input{
-  height: 50px;
-  border-radius: 10px;
-  font-size: large;
-  padding-left: 10px;
-}
-
-/* Home button styling */
+/* home button styles*/
 .home{
   margin-right: 40px;
-  transition: transform 2s ease;
+  /* transition: transform 2s ease; */
   color: #f1f1f1;
 }
 .home:hover {
   background-color: red;
-  transform: rotateY(360deg);
+  /* transform: rotateY(360deg); */
   color: #f1f1f1;
   padding: 4px;
+  border-radius: 3px;
 }
 
-/* about button styling */
+/* about button styles*/
 .about{
-  transition: transform 2s ease;
+  /* transition: transform 2s ease; */
   color: #f1f1f1;
   margin-right: 150px;
 }
 .about:hover{
   background-color: red;
-  transform: rotateY(360deg);
+  /* transform: rotateY(360deg); */
   color: #f1f1f1;
   padding: 4px;
+  border-radius: 3px;
 }
 
 /* side nav styling */
@@ -97,38 +73,11 @@ body{
   background-color: #020930;
   color: #f1f1f1;
   width: 20%;
-  height: 100vh;
+  height: 100%;
   border-radius: 0 0 20px 0;
 }
 
-/* genres styles */
-.genre-heading{
-  font-size: 22px;
-  font-weight: bold;
-  width: 100px;
-}
-.genres{
-  list-style-type: none;
-}
-.genres li{
-  font-size: x-large;
-  margin-bottom: 10px;
-  background-color: #f1f1f1;
-  color: #020930;
-  border-radius: 7px;
-  padding: 5px;
-  font-weight: 400;
-  box-shadow: 0px 10px 10px -5px rgb(240, 8, 8);
-}
-.genre-heading{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-}
-
-
-/* Footer */
+/* footer styles */
 .footer{
   display: flex;
   flex-direction: row;
@@ -152,3 +101,22 @@ body{
   font-size: larger;
   color: #f1f1f1;
 }
+
+
+/* about-page  styles */
+.about-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-page h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-page p {
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+

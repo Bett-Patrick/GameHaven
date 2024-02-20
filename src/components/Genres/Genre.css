@@ -1,14 +1,37 @@
+
+.genre-heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  font-size: 22px;
+  font-weight: bold;
+  width: 100px;
+}
+.genres{
+  list-style-type: none;
+  height: 100%;
+  overflow: scroll;
+}
+.genres li{
+  font-size: large;
+  margin-bottom: 10px;
+  background-color: #f1f1f1;
+  color: #020930;
+  border-radius: 7px;
+  padding: 2px;
+  font-weight: 400;
+  box-shadow: 0 5px 5px -5px rgb(150, 64, 64);
+}
 .genre-sidebar {
     width: 200px;
     background-color: #f0f0f0;
-    padding: 10px;
-  }
-  
+    padding: 5px;
+  } 
   .genre-sidebar ul {
     list-style: none;
     padding: 0;
-  }
-  
+  } 
   .genre-sidebar li {
     cursor: pointer;
     margin-bottom: 8px;
@@ -18,11 +41,12 @@
     transition: background-color 0.3s;
   }
   
-  /* .genre-sidebar li:hover {
-    background-color: #ccc;
+  .genre-sidebar li:hover {
+    background-color: #f09e9e;
   }
-   */
-  .games-list {
+  
+  
+  /* .games-list {
     margin-top: 10px;
   }
   
@@ -42,5 +66,5 @@
   .listed-game{
     display: flex;
     flex-direction: column;
-  }
+  } */
   
